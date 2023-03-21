@@ -53,3 +53,33 @@ Next, let’s append the Debian package repository address to the server’s ```
   ```sh
   sudo apt install jenkins
   ```
+  
+  ### Start and Configure Jenkins
+  
+  now that Jenkins is installed, start it by using ```systemctl```:
+  ```sh
+  sudo systemctl start jenkins.service
+  ```
+  Since ```systemctl``` doesn’t display status output, we’ll use the ```status``` command to verify that Jenkins started successfully:
+  ```sh
+  sudo systemctl status jenkins
+  ```
+  If everything went well, the beginning of the status output shows that the service is active and configured to start at boot.
+  Now that Jenkins is up and running, adjust your firewall rules so that you can reach it from a web browser to complete the initial setup.
+  
+  By default, Jenkins runs on port ```8080```. Open that port using ```ufw```:
+  ```sh
+  sudo ufw allow 8080
+  ```
+  - Note: If the firewall is inactive, the following commands will allow OpenSSH and enable the firewall:
+  ```sh
+  sudo ufw allow OpenSSH
+  sudo ufw enable
+  ```
+  Check ufw’s status to confirm the new rules:
+  ```sh
+  sudo ufw status
+  ```
+  You’ll notice that traffic is allowed to port ```8080``` from anywhere.
+  
+  With Jenkins installed and a firewall configured, you have completed the installation stage and can continue with configuring Jenkins.
