@@ -83,3 +83,12 @@ Next, let’s append the Debian package repository address to the server’s ```
   You’ll notice that traffic is allowed to port ```8080``` from anywhere.
   
   With Jenkins installed and a firewall configured, you have completed the installation stage and can continue with configuring Jenkins.
+  - Configure Jenkins
+  To set up your installation, visit Jenkins on its default port, 8080, using your server domain name or IP address: ```http://your_server_ip_or_domain:8080```
+  
+  You should receive the Unlock Jenkins screen, which displays the location of the initial password;
+  In the terminal window, use the ```cat``` command to display the password.
+  ```sh
+  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+  ```
+  Copy the 32-character alphanumeric password from the terminal and paste it into the Administrator password field, then click Continue.
