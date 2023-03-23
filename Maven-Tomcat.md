@@ -92,3 +92,5 @@ Next, let’s append the Debian package repository address to the server’s ```
   sudo cat /var/lib/jenkins/secrets/initialAdminPassword
   ```
   Copy the 32-character alphanumeric password from the terminal and paste it into the Administrator password field, then click Continue.
+  The next screen presents the option of installing suggested plugins or selecting specific plugins - close that window as we can install our required plugins later.
+  
