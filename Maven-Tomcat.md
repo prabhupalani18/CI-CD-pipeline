@@ -94,3 +94,8 @@ Next, let’s append the Debian package repository address to the server’s ```
   Copy the 32-character alphanumeric password from the terminal and paste it into the Administrator password field, then click Continue.
   The next screen presents the option of installing suggested plugins or selecting specific plugins - close that window as we can install our required plugins later.
   
+  - Install Tomcat
+  For security purposes, Tomcat should run under a separate, unprivileged user. Run the following command to create a user called ```tomcat```:
+  ```sh
+  sudo useradd -m -d /opt/tomcat -U -s /bin/false tomcat
+  ```
