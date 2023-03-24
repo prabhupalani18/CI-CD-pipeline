@@ -84,6 +84,7 @@ Next, let’s append the Debian package repository address to the server’s ```
   
   With Jenkins installed and a firewall configured, you have completed the installation stage and can continue with configuring Jenkins.
   - Configure Jenkins
+  
   To set up your installation, visit Jenkins on its default port, 8080, using your server domain name or IP address: ```http://your_server_ip_or_domain:8080```
   
   You should receive the Unlock Jenkins screen, which displays the location of the initial password;
@@ -95,6 +96,7 @@ Next, let’s append the Debian package repository address to the server’s ```
   The next screen presents the option of installing suggested plugins or selecting specific plugins - close that window as we can install our required plugins later.
   
   - Install Tomcat
+  
   For security purposes, Tomcat should run under a separate, unprivileged user. Run the following command to create a user called ```tomcat```:
   ```sh
   sudo useradd -m -d /opt/tomcat -U -s /bin/false tomcat
