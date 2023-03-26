@@ -94,3 +94,34 @@ Next, let’s append the Debian package repository address to the server’s ```
   ```
   Copy the 32-character alphanumeric password from the terminal and paste it into the Administrator password field, then click Continue.
   The next screen presents the option of installing suggested plugins or selecting specific plugins - close that window as we can install our required plugins later.
+  
+  ### Install Tomcat server
+  
+  For security purposes, Tomcat should run under a separate, unprivileged user. Run the following command to create a user called ```tomcat```:
+  ```sh
+  sudo useradd -m -d /opt/tomcat -U -s /bin/false tomcat
+  ```
+  By supplying ```/bin/false``` as the user’s default shell, you ensure that it’s not possible to log in as ```tomcat```.
+  
+  Download the archive using wget by running the following command:
+  ```sh
+  wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.7/bin/apache-tomcat-10.1.7.tar.gz
+  ```
+  The ```wget``` command downloads resources from the Internet.
+  
+  Then, extract the archive you downloaded by running:
+  ```sh
+  sudo tar xzvf apache-tomcat-10*tar.gz -C /opt/tomcat --strip-components=1
+  ```
+  Since you have already created a user, you can now grant tomcat ownership over the extracted installation by running:
+  ```sh
+  sudo chown -R tomcat:tomcat /opt/tomcat/
+  sudo chmod -R u+x /opt/tomcat/bin
+  ```
+  ### Optional
+  Change tomcat server default port address incase that is already in use:
+  - Go to ```tomcat>conf``` folder
+  - Search "Connector port"
+  - Replace "8080" by ```your port number```
+  - Restart tomcat server.
+  
