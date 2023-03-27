@@ -125,3 +125,13 @@ Next, let’s append the Debian package repository address to the server’s ```
   - Replace "8080" by ```your port number```
   - Restart tomcat server.
   
+  Access tomcat application from browser on port 8090  
+ - http://<Public_IP>:```your port number```
+
+### Configure Tomcat
+  
+Now application is accessible on ```your port number``` or default value 8080. but tomcat application doesnt allow to login from browser. changing a default parameter in context.xml does address this issue
+   ```sh
+   #search for context.xml
+   find / -name context.xml
+   ```
