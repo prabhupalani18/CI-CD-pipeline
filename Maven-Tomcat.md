@@ -146,3 +146,5 @@ At the time of writing this lecture below 2 files are updated.
    tomcatdown  
    tomcatup
    ```
+  Update users information in the tomcat-users.xml file
+goto tomcat home directory and Add below users to conf/tomcat-users.xml file
