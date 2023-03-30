@@ -148,3 +148,12 @@ At the time of writing this lecture below 2 files are updated.
    ```
   Update users information in the tomcat-users.xml file
 goto tomcat home directory and Add below users to conf/tomcat-users.xml file
+```sh
+	<role rolename="manager-gui"/>
+	<role rolename="manager-script"/>
+	<role rolename="manager-jmx"/>
+	<role rolename="manager-status"/>
+	<user username="admin" password="admin" roles="manager-gui, manager-script, manager-jmx, manager-status"/>
+	<user username="deployer" password="deployer" roles="manager-script"/>
+	<user username="tomcat" password="s3cret" roles="manager-gui"/>
+   ```
