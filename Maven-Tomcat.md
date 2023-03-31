@@ -25,7 +25,7 @@ Once Ubuntu is installed, shut down the virtual machine and then start it again.
 ```sh
 sudo sh /media/$USER/VBox_GAs_<version>/VBoxLinuxAdditions.run
 ```
-Restart serivce and try to login to tomcat application from the browser. This time it should be Successful
+
 Replace <version> with the version number of the Guest Additions. Follow the on-screen instructions to complete the installation.
   
 ### Install Jenkins in Ubuntu:
@@ -157,3 +157,4 @@ goto tomcat home directory and Add below users to conf/tomcat-users.xml file
 	<user username="deployer" password="deployer" roles="manager-script"/>
 	<user username="tomcat" password="s3cret" roles="manager-gui"/>
    ```
+Restart serivce and try to login to tomcat application from the browser. This time it should be Successful
